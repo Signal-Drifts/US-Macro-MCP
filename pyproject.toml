@@ -1,0 +1,35 @@
+[project]
+name = "us-macro-mcp"
+version = "0.1.0"
+description = "MCP server exposing US macroeconomic indicators - inflation, employment, growth, housing, rates and recession signals - from the Federal Reserve's FRED database."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "Harish Gupta", email = "hgus107@gmail.com" }
+]
+keywords = ["mcp", "model-context-protocol", "economics", "fred", "macro", "inflation", "llm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    "httpx>=0.27",
+    "mcp[cli]>=1.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/hgus107/US-Macro-MCP"
+Repository = "https://github.com/hgus107/US-Macro-MCP"
+Issues = "https://github.com/hgus107/US-Macro-MCP/issues"
+
+[project.scripts]
+us-macro-mcp = "us_macro_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"
