@@ -9,7 +9,7 @@ What this file does, in order:
 
 from __future__ import annotations
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 
 
 # The command line entry point: starts the MCP server and hands control to it.

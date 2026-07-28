@@ -6,6 +6,14 @@ An MCP server that gives AI assistants clean access to US macroeconomic data —
 
 It is built so the assistant never has to know a FRED series ID, and never has to do arithmetic. Ask for `cpi` and you get the latest reading, the previous one, the year-ago value, and the percentage changes already calculated.
 
+## Changelog
+
+| Date | Version | Comment |
+|---|---|---|
+| 2026-07-27 | 0.1.2 | Added OS and Python version classifiers, changelog, and contact address switched to GitHub noreply. |
+| 2026-07-27 | 0.1.1 | Added `mcp-name` marker for registry ownership verification. First version listed in the official MCP registry. |
+| 2026-07-27 | 0.1.0 | Initial release — 58 indicators, 8 tools. Yanked; superseded by 0.1.1. |
+
 ## What it does
 
 | Tool | What you use it for |

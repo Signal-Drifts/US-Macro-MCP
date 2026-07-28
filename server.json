@@ -3,7 +3,7 @@
   "name": "io.github.hgus107/us-macro-mcp",
   "title": "US Macro",
   "description": "US macroeconomic data from FRED: inflation, employment, growth, housing, rates, recession signals.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "url": "https://github.com/hgus107/US-Macro-MCP",
     "source": "github"
@@ -13,7 +13,7 @@
     {
       "registryType": "pypi",
       "identifier": "us-macro-mcp",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "transport": {
         "type": "stdio"
       },
