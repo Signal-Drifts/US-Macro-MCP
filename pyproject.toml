@@ -1,6 +1,6 @@
 [project]
 name = "us-macro-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server exposing US macroeconomic indicators - inflation, employment, growth, housing, rates and recession signals - from the Federal Reserve's FRED database."
 readme = "README.md"
 requires-python = ">=3.10"

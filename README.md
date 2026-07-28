@@ -1,5 +1,7 @@
 # US-Macro-MCP
 
+<!-- mcp-name: io.github.hgus107/us-macro-mcp -->
+
 An MCP server that gives AI assistants clean access to US macroeconomic data — 58 indicators covering inflation, employment, growth, housing, consumer behaviour, interest rates, financial stress, markets and federal finances, sourced from the Federal Reserve's FRED database.
 
 It is built so the assistant never has to know a FRED series ID, and never has to do arithmetic. Ask for `cpi` and you get the latest reading, the previous one, the year-ago value, and the percentage changes already calculated.
