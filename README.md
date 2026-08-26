@@ -6,6 +6,8 @@ An MCP server that gives AI assistants clean access to US macroeconomic data —
 
 It is built so the assistant never has to know a FRED series ID, and never has to do arithmetic. Ask for `cpi` and you get the latest reading, the previous one, the year-ago value, and the percentage changes already calculated.
 
+Registry Official Link : https://pypi.org/project/us-macro-mcp/
+
 ## Changelog
 
 | Date | Version | Comment |
