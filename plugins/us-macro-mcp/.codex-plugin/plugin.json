@@ -1,6 +1,6 @@
 {
   "name": "us-macro-mcp",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "US macroeconomic indicators, history, release calendars and recession signals from FRED.",
   "author": {
     "name": "Harish Gupta",
@@ -9,7 +9,13 @@
   "homepage": "https://github.com/Signal-Drifts/US-Macro-MCP",
   "repository": "https://github.com/Signal-Drifts/US-Macro-MCP",
   "license": "MIT",
-  "keywords": ["economics", "fred", "macro", "inflation", "mcp"],
+  "keywords": [
+    "economics",
+    "fred",
+    "macro",
+    "inflation",
+    "mcp"
+  ],
   "mcpServers": "./.mcp.json",
   "requires_local_executor": true,
   "interface": {
@@ -18,7 +24,9 @@
     "longDescription": "Research the US economy with 58 indicators from the Federal Reserve Bank of St. Louis FRED database. Retrieve inflation, unemployment, GDP, housing, interest rates and market data; compare historical trends; check economic release dates and statistical recession signals. Each reading includes its observation date, units and source. This economic and financial research tool runs locally using us-macro-mcp 0.1.2 from PyPI and requires uv, Python 3.10 or newer, and your own FRED API key. The maintainer does not host an API endpoint or collect query telemetry. Data can lag, be revised or be unavailable; recession signals are historical statistical measures, not forecasts or investment advice.",
     "developerName": "Signal Drifts",
     "category": "Finance",
-    "capabilities": ["Read"],
+    "capabilities": [
+      "Read"
+    ],
     "websiteURL": "https://github.com/Signal-Drifts/US-Macro-MCP",
     "supportURL": "https://github.com/Signal-Drifts/US-Macro-MCP/issues",
     "privacyPolicyURL": "https://github.com/Signal-Drifts/US-Macro-MCP/blob/main/PRIVACY.md",
@@ -34,7 +42,7 @@
   "extensions": {
     "com.openai": {
       "publication": {
-        "release_notes": "Adds public support, privacy and software/data terms pages; a bundled icon; a shorter subtitle; and a clearer economic-research description and category. The local MCP remains pinned to PyPI us-macro-mcp 0.1.2 with the compatible MCP SDK 1.x."
+        "release_notes": "Uses the publisher-provided bird icon, preserving the original bitmap inside a square SVG container. Includes the corrected listing URLs, subtitle and Finance category. The MCP still runs locally until a public HTTPS service is configured."
       }
     }
   }
