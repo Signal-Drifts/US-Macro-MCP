@@ -1,0 +1,29 @@
+{
+  "name": "us-macro-mcp",
+  "version": "0.1.2",
+  "description": "US macroeconomic indicators, history, release calendars and recession signals from FRED.",
+  "author": {
+    "name": "Harish Gupta",
+    "url": "https://github.com/Signal-Drifts"
+  },
+  "homepage": "https://github.com/Signal-Drifts/US-Macro-MCP",
+  "repository": "https://github.com/Signal-Drifts/US-Macro-MCP",
+  "license": "MIT",
+  "keywords": ["economics", "fred", "macro", "inflation", "mcp"],
+  "mcpServers": "./.mcp.json",
+  "requires_local_executor": true,
+  "interface": {
+    "displayName": "US Macro",
+    "shortDescription": "US economic data and recession signals from FRED",
+    "longDescription": "Access 58 US macroeconomic indicators across inflation, employment, growth, housing, rates and more. Runs locally using the published us-macro-mcp package. Requires uv and your own free FRED API key.",
+    "developerName": "Signal Drifts",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "websiteURL": "https://github.com/Signal-Drifts/US-Macro-MCP",
+    "defaultPrompt": [
+      "Give me a snapshot of the US economy using US Macro.",
+      "Compare inflation and unemployment over the past year.",
+      "Check the current recession signals."
+    ]
+  }
+}

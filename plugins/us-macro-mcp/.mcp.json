@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "us-macro": {
+      "command": "uvx",
+      "args": ["--from", "us-macro-mcp==0.1.2", "--with", "mcp[cli]>=1.2,<2", "us-macro-mcp"],
+      "env_vars": ["FRED_API_KEY"]
+    }
+  }
+}

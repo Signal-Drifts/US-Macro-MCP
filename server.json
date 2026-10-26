@@ -5,10 +5,10 @@
   "description": "US macroeconomic data from FRED: inflation, employment, growth, housing, rates, recession signals.",
   "version": "0.1.2",
   "repository": {
-    "url": "https://github.com/hgus107/US-Macro-MCP",
+    "url": "https://github.com/Signal-Drifts/US-Macro-MCP",
     "source": "github"
   },
-  "websiteUrl": "https://github.com/hgus107/US-Macro-MCP",
+  "websiteUrl": "https://github.com/Signal-Drifts/US-Macro-MCP",
   "packages": [
     {
       "registryType": "pypi",

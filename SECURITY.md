@@ -14,7 +14,7 @@ Only the latest published release receives security fixes. Older versions on PyP
 
 Report privately through GitHub's security advisory form:
 
-**https://github.com/hgus107/US-Macro-MCP/security/advisories/new**
+**https://github.com/Signal-Drifts/US-Macro-MCP/security/advisories/new**
 
 Please do not open a public issue for a security problem. Expect an acknowledgement within seven days.
 

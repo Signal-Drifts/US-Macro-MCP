@@ -29,10 +29,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/hgus107/US-Macro-MCP"
-Repository = "https://github.com/hgus107/US-Macro-MCP"
-Issues = "https://github.com/hgus107/US-Macro-MCP/issues"
-Changelog = "https://github.com/hgus107/US-Macro-MCP#changelog"
+Homepage = "https://github.com/Signal-Drifts/US-Macro-MCP"
+Repository = "https://github.com/Signal-Drifts/US-Macro-MCP"
+Issues = "https://github.com/Signal-Drifts/US-Macro-MCP/issues"
+Changelog = "https://github.com/Signal-Drifts/US-Macro-MCP#changelog"
 
 [project.scripts]
 us-macro-mcp = "us_macro_mcp:main"

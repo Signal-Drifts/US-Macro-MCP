@@ -35,6 +35,58 @@ A free FRED API key. Request one at [fredaccount.stlouisfed.org/apikeys](https:/
 
 ## Install
 
+### Codex plugin marketplace
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and make sure
+`uvx` is on the PATH available to Codex. The plugin launches the published PyPI
+release `us-macro-mcp==0.1.2` locally over stdio; it requires Python 3.10 or newer.
+Its launcher constrains the MCP SDK to `>=1.2,<2` because this release uses the
+SDK's v1 FastMCP API.
+
+1. Make your `FRED_API_KEY` environment variable available to the Codex app before
+   starting it. The plugin forwards that variable to the MCP server; it does not
+   store the key in its files or prompt for it during installation.
+   On macOS, run this locally, then fully quit and reopen Codex:
+
+   ```bash
+   launchctl setenv FRED_API_KEY 'YOUR_FRED_API_KEY'
+   ```
+
+   Replace the placeholder with your own key. Do not commit or share the key.
+   `launchctl setenv` applies to the current login session; repeat it after logging
+   back in. On Linux, export the variable before launching Codex from that shell;
+   on Windows, set a user environment variable and restart Codex.
+2. In Codex, open **Plugins → Add → Add plugin marketplace**.
+3. Set **Source** to `Signal-Drifts/US-Macro-MCP` (or
+   `https://github.com/Signal-Drifts/US-Macro-MCP.git`), set **Git ref** to `main`,
+   leave **Sparse paths** empty, and click **Add marketplace**.
+4. Select **Signal Drifts** and install **US Macro**, then start a new chat.
+5. Try: “Use US Macro to list the available indicators,” then ask for a macro
+   snapshot. Listing indicators checks discovery; live data also requires the
+   FRED key and network access to FRED.
+
+You can also register the marketplace with the Codex CLI:
+
+```bash
+codex plugin marketplace add Signal-Drifts/US-Macro-MCP --ref main
+```
+
+The catalog is at `.agents/plugins/marketplace.json`; the plugin manifest and MCP
+configuration are under `plugins/us-macro-mcp/`. When updating the server release,
+update the pinned PyPI version in the plugin's `.mcp.json` and its manifest version
+together, then refresh the marketplace and installed plugin.
+
+This repository provides a custom marketplace. Inclusion in OpenAI's public
+plugin directory is a separate submission and review process; local MCP
+submissions currently require an approved partner organization. See the official
+[plugin packaging guide](https://developers.openai.com/plugins/build/plugins) and
+[desktop-only submission guide](https://developers.openai.com/plugins/deploy/desktop-only).
+
+The existing MCP Registry identifier `io.github.hgus107/us-macro-mcp` is retained;
+moving the GitHub repository does not migrate that registry identity. Repository
+links in future Python/MCP Registry releases point to `Signal-Drifts`; metadata
+already published on PyPI remains attached to its existing release.
+
 ### Claude Desktop
 
 Add this to your `claude_desktop_config.json`:
@@ -44,7 +96,7 @@ Add this to your `claude_desktop_config.json`:
   "mcpServers": {
     "us-macro": {
       "command": "uvx",
-      "args": ["us-macro-mcp"],
+      "args": ["--from", "us-macro-mcp==0.1.2", "--with", "mcp[cli]>=1.2,<2", "us-macro-mcp"],
       "env": { "FRED_API_KEY": "your_key_here" }
     }
   }
@@ -54,12 +106,18 @@ Add this to your `claude_desktop_config.json`:
 ### Claude Code
 
 ```bash
-claude mcp add us-macro --env FRED_API_KEY=your_key_here -- uvx us-macro-mcp
+claude mcp add us-macro --env FRED_API_KEY=your_key_here -- uvx --from us-macro-mcp==0.1.2 --with 'mcp[cli]>=1.2,<2' us-macro-mcp
 ```
 
 ### Any other MCP client
 
-Run `uvx us-macro-mcp` with `FRED_API_KEY` set in the environment. The server speaks MCP over stdio.
+With `FRED_API_KEY` set in the environment, run:
+
+```bash
+uvx --from us-macro-mcp==0.1.2 --with 'mcp[cli]>=1.2,<2' us-macro-mcp
+```
+
+The server speaks MCP over stdio.
 
 ## How it behaves
 
