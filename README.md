@@ -72,9 +72,10 @@ codex plugin marketplace add Signal-Drifts/US-Macro-MCP --ref main
 ```
 
 The catalog is at `.agents/plugins/marketplace.json`; the plugin manifest and MCP
-configuration are under `plugins/us-macro-mcp/`. When updating the server release,
-update the pinned PyPI version in the plugin's `.mcp.json` and its manifest version
-together, then refresh the marketplace and installed plugin.
+configuration are under `plugins/us-macro-mcp/`. The plugin package has its own
+version: plugin `0.1.3` uses PyPI server `0.1.2`. When updating the server release,
+update the pinned PyPI version in the plugin's `.mcp.json` and bump the plugin
+manifest version, then refresh the marketplace and installed plugin.
 
 This repository provides a custom marketplace. Inclusion in OpenAI's public
 plugin directory is a separate submission and review process; local MCP
@@ -197,3 +198,9 @@ FRED's own catalog all drift over a year. Work through this list every January a
 ## License
 
 MIT
+
+## Support and policies
+
+- [Support and bug reports](https://github.com/Signal-Drifts/US-Macro-MCP/issues)
+- [Privacy policy](PRIVACY.md)
+- [Software and data terms](TERMS.md)

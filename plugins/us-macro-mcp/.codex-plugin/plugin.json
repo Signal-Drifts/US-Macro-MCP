@@ -1,6 +1,6 @@
 {
   "name": "us-macro-mcp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "US macroeconomic indicators, history, release calendars and recession signals from FRED.",
   "author": {
     "name": "Harish Gupta",
@@ -14,16 +14,28 @@
   "requires_local_executor": true,
   "interface": {
     "displayName": "US Macro",
-    "shortDescription": "US economic data and recession signals from FRED",
-    "longDescription": "Access 58 US macroeconomic indicators across inflation, employment, growth, housing, rates and more. Runs locally using the published us-macro-mcp package. Requires uv and your own free FRED API key.",
+    "shortDescription": "US economic data from FRED",
+    "longDescription": "Research the US economy with 58 indicators from the Federal Reserve Bank of St. Louis FRED database. Retrieve inflation, unemployment, GDP, housing, interest rates and market data; compare historical trends; check economic release dates and statistical recession signals. Each reading includes its observation date, units and source. This economic and financial research tool runs locally using us-macro-mcp 0.1.2 from PyPI and requires uv, Python 3.10 or newer, and your own FRED API key. The maintainer does not host an API endpoint or collect query telemetry. Data can lag, be revised or be unavailable; recession signals are historical statistical measures, not forecasts or investment advice.",
     "developerName": "Signal Drifts",
-    "category": "Productivity",
+    "category": "Finance",
     "capabilities": ["Read"],
     "websiteURL": "https://github.com/Signal-Drifts/US-Macro-MCP",
+    "supportURL": "https://github.com/Signal-Drifts/US-Macro-MCP/issues",
+    "privacyPolicyURL": "https://github.com/Signal-Drifts/US-Macro-MCP/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/Signal-Drifts/US-Macro-MCP/blob/main/TERMS.md",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
     "defaultPrompt": [
       "Give me a snapshot of the US economy using US Macro.",
       "Compare inflation and unemployment over the past year.",
       "Check the current recession signals."
     ]
+  },
+  "extensions": {
+    "com.openai": {
+      "publication": {
+        "release_notes": "Adds public support, privacy and software/data terms pages; a bundled icon; a shorter subtitle; and a clearer economic-research description and category. The local MCP remains pinned to PyPI us-macro-mcp 0.1.2 with the compatible MCP SDK 1.x."
+      }
+    }
   }
 }
